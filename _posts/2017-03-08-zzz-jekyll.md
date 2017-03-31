@@ -5,7 +5,7 @@ categories: General
 feature_text: 帮助系列
 ---
 
-![2](../assets/2.gif)
+![2](/assets/images/2.gif)
 
 # Typora 帮助
 
@@ -69,16 +69,3 @@ feature_text: 帮助系列
 - [ ] 思维导图
 - [ ] Markdown
       - [ ] grails  实例
-
-            ​
-
-
-`fggh`
-
-$ghhhgh ;kj$
-
-1. ==导入==到你的工程，如果是IDEA，则需要：
-   a.菜单中选择`File`–>`New`–>`Project from Existing Sources...`
-   b.选择解压后的项目文件夹，点击`OK`
-   c.点击`Import project from external model`并选择`Maven`，点击`Next`到底为止。
-   d.若你的环境有多个版本的JDK，注意到选择`Java SDK`的时候请选择`Java 7`以上的版本
