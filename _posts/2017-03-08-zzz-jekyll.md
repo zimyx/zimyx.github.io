@@ -48,15 +48,7 @@ feature_text: 帮助系列
   color: #151515;
   background-color: #ac4142;
 }
-.highlight .c, .highlight .cd, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #505050;
-}
-.highlight .cp {
-  color: #f4bf75;
-}
-.highlight .nt {
-  color: #f4bf75;
-}
+
 ```
 
 
