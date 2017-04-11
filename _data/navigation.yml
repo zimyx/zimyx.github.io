@@ -1,13 +1,17 @@
 # main links
 main:
-    - title: "自说自话"
-      url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-    - title: "学习时间轴"
+    - title: "Z说"
+      url: /sayings/
+    - title: "Z话"
+      url: /quotations/
+    - title: "Z参"
+      url: /zbcc-ref/
+    - title: "Z考"
+      url: /zbcc-textual/
+    - title: "Z轴"
       url: https://mmistakes.github.io/minimal-mistakes/about/
-    - title: "zbolg"
-      url: /collection-archive/
   #   url: /year-archive/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
-  #   url: /sitemap/
+  #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
