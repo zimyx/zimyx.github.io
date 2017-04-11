@@ -69,7 +69,7 @@ analytics:
 author:
   name             : "Zimy"
   avatar           : "/assets/images/2.gif" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am a man.呃 就这些"
+  bio              : "老啦 就这些"
   location         : "WuHan ，China"
   email            :
   uri              :
@@ -235,9 +235,9 @@ collections:
     output: true
     permalink: /:collection/:path/
 
-# Defaults
+# Front Matter Defaults
 defaults:
-  # _posts
+  # _posts 通用文章的YAML
   - scope:
       path: ""
       type: posts
@@ -248,3 +248,39 @@ defaults:
       comments: true # true
       share: true
       related: true
+  # sayings
+  - scope:
+      path: _posts/sayings
+      type: posts
+    values:
+      layout: single
+      category: sayings
+      read_time: true
+      comments: true
+  # quotations
+  - scope:
+      path: _posts/quotations
+      type: posts
+    values:
+      layout: page
+      category: quotations
+      read_time: true
+      comments: true
+  # zbcc-ref
+  - scope:
+      path: _posts/zbcc-ref
+      type: posts
+    values:
+      layout: work
+      category: zbcc-ref
+      read_time: true
+      comments: true
+ # zbcc-textual
+  - scope:
+      path: _posts/zbcc-textual
+      type: posts
+    values:
+      layout: work
+      category: zbcc-textual
+      read_time: true
+      comments: true
