@@ -266,21 +266,21 @@ defaults:
       category: quotations
       read_time: true
       comments: true
-  # zbcc-ref
+  # ref
   - scope:
-      path: _posts/zbcc-ref
+      path: _posts/ref
       type: posts
     values:
-      layout: work
-      category: zbcc-ref
+      layout: single
+      category: ref
       read_time: true
       comments: true
- # zbcc-textual
+ # think
   - scope:
-      path: _posts/zbcc-textual
+      path: _posts/think
       type: posts
     values:
       layout: work
-      category: zbcc-textual
+      category: think
       read_time: true
       comments: true
