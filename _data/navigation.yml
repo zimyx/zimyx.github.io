@@ -10,8 +10,6 @@ main:
       url: /think/
     - title: "Z轴"
       url: https://mmistakes.github.io/minimal-mistakes/about/
-    - title: github
-      url: https://github.com/zimyx/zimyx.github.io/
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
