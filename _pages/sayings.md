@@ -3,20 +3,9 @@ layout: page
 permalink: /sayings/
 title:  "自说"
 author_profile: true
-excerpt: "A selection of things I've designed, illustrated, and developed."
 ---
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
-{% endif %}
+  说说那些看到的（see） 听到的（listen） 嗅到的（smell） 尝到的（taste） 感到的（feeling） 想到的 （idea）
 
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
- 
 <ul>
 {% for post in site.categories.sayings %}
   {% capture y %}{{post.date | date:"%Y"}}{% endcapture %}
