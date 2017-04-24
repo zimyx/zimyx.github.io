@@ -278,6 +278,7 @@ defaults:
       category: ref
       read_time: false
       comments: false
+      author_profile: false
       sidebar:
         nav: "docs"
  # think
