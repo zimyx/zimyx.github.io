@@ -240,16 +240,16 @@ collections:
 # Front Matter Defaults
 defaults:
   # _posts 通用文章的YAML
-  # - scope:
-  #     path: ""
-  #     type: posts
-  #   values:
-  #     layout: single
-  #     author_profile: true
-  #     read_time: true
-  #     comments: true # true
-  #     share: true
-  #     related: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true # true
+      share: true
+      related: true
   # 自说
   - scope:
       path: _posts/sayings
@@ -272,12 +272,14 @@ defaults:
   # 自参
   - scope:
       path: _posts/ref
-      type: posts
+      type: docs
     values:
       layout: single
       category: ref
-      read_time: true
-      comments: true
+      read_time: false
+      comments: false
+      sidebar:
+        nav: "docs"
  # think
   - scope:
       path: _posts/think

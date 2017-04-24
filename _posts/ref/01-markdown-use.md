@@ -1,6 +1,6 @@
 ---
 title:  "Jeklly支持的Markdown规范"
-#date:   2017-04-12 16:46:11 +0800
+permalink: /ref/markdown-use/
 categories: General
 feature_text: 帮助系列
 ---
