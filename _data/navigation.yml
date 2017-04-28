@@ -18,11 +18,11 @@ main:
 
 # documentation links
 ref-blog:
-  - title: bolg 相关
+  - title: blog 相关
     children:
       - title: "Markdown用法"
         url: /ref/blog/markdown-use/
-      - title: "Structure"
+      - title: "页面关系"
         url: /ref/blog/structure/
       - title: "Installation"
         url: /docs/installation/
