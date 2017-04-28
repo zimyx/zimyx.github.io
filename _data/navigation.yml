@@ -5,7 +5,7 @@ main:
     - title: "Z话"
       url: /quotations/
     - title: "Z参"
-      url: /post/ref/markdown-use/
+      url: /ref/
     - title: "Z悟"
       url: /think/
     - title: "Z轴"
@@ -17,13 +17,13 @@ main:
 
 
 # documentation links
-docs:
-  - title: Getting Started
+ref-blog:
+  - title: bolg 相关
     children:
-      - title: "Quick-Start Guide"
-        url: /posts/ref/01-quick-start-guide/
+      - title: "Markdown用法"
+        url: /ref/blog/markdown-use/
       - title: "Structure"
-        url: /docs/structure/
+        url: /ref/blog/structure/
       - title: "Installation"
         url: /docs/installation/
       - title: "Upgrading"

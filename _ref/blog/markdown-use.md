@@ -1,7 +1,5 @@
 ---
 title:  "Jeklly支持的Markdown规范"
-permalink: /ref/markdown-use/
-categories: General
 feature_text: 帮助系列
 ---
 
