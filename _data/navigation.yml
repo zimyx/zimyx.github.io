@@ -46,5 +46,5 @@ ref-blog:
 ref-work:
   - title: work 相关
     children:
-      - title: "Markdown用法"
+      - title: "数据库"
         url: /ref/work/sqlite/
