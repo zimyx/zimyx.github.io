@@ -9,7 +9,7 @@ main:
     - title: "Z悟"
       url: /think/
     - title: "Z轴"
-      url: https://mmistakes.github.io/minimal-mistakes/about/
+      url:
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
@@ -42,3 +42,9 @@ ref-blog:
         url: /docs/authors/
       - title: "Layouts"
         url: /docs/layouts/
+
+ref-work:
+  - title: work 相关
+    children:
+      - title: "Markdown用法"
+        url: /ref/work/sqlite/

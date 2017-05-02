@@ -270,7 +270,7 @@ defaults:
       comments: true
   # 自参
   - scope:
-      path: ""
+      path: _ref/blog
       type: ref
     values:
       layout: single
@@ -279,8 +279,19 @@ defaults:
       author_profile: false
       share: false
       sidebar:
-        nav: "ref-blog"
- # think
+        nav: ref-blog
+  - scope:
+      path: _ref/work
+      type: ref
+    values:
+      layout: single
+      read_time: false
+      comments: false
+      author_profile: false
+      share: false
+      sidebar:
+        nav: ref-work
+ # 自悟
   - scope:
       path: _posts/think
       type: posts
