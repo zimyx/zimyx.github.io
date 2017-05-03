@@ -41,3 +41,23 @@ Jeklly 支持的Markdown规范 （使用Typora的方法）
 ```
 
 
+
+加强文本块
+
+**注意**      在文本块之后加上    {: .notice}
+{: .notice}
+
+**Primary Notice:**   在文本块换行之后加上   {: .notice--primary}
+{: .notice--primary}
+
+**Info Notice:**      在文本块换行之后加上   {: .notice--info}
+{: .notice--info}
+
+**Warning Notice:**   在文本块换行之后加上   {: .notice--warning}
+{: .notice--warning}
+
+**Danger Notice:**    在文本块换行之后加上   {: .notice--danger}
+{: .notice--danger}
+
+**Success Notice:**   在文本块换行之后加上    {: .notice--success}
+{: .notice--success}
