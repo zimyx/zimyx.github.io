@@ -4,9 +4,7 @@ title:  "SQLite数据库"
 
 
 
-[官方手册](https://sqlite.org/cli.html)
-
-[中文整理](http://www.cnblogs.com/songsh96/archive/2011/10/14/2211079.html)
+[官方手册](https://sqlite.org/cli.html)       [菜鸟教程](http://www.runoob.com/sqlite/sqlite-tutorial.html)
 
 删除表   ```DROP TABLE xx_tmp;```
 
@@ -33,28 +31,25 @@ kdj     number,         -- 客单价
 ```sql
 .separator ','
 .import  201603.csv tmp_0?                   
-```
+
 --导入CVS数据
-```sql
 INSERT INTO w*l*_yxs
 (yyyymm, mkt, mktname, xssr, hsml, mll, lks, kdj)
 SELECT  201701 ,门店编码, 门店名称, "销售收入(单位：万元)", "含税毛利(单位：万元)", 含税毛利率, 来客数, "客单价(单位：元)"
 FROM tmp_701  where  门店编码 >0 ;
 ```
+查询语句
+```sql
 合计
-```sql
 SELECT yyyymm,count(yyyymm), round(SUM(xssr),2),SUM(hsml), round( SUM(hsml)/SUM(xssr),4) ,SUM(lks),round(SUM(xssr*10000)/SUM(lks),2) FROM w*l*_yxs GROUP BY yyyymm ;
-```
+
 关店情况查询
-```sql
-select mkt,mktname  from  w*l*_yxs where yyyymm=201401  and mkt not in (select mkt from w*l*_yxs where yyyymm =201405 )
-```
+select mkt,mktname  from  w*l*_yxs where yyyymm=201401  and mkt not in (select mkt from w*l*_yxs where yyyymm =201405 );
+
 统计店数
-```sql
-select * from w*l*_yxs where yyyymm=201401
-```
+select * from w*l*_yxs where yyyymm=201401;
+
 截取毛利率小数点2位
-```sql
 update w*l*_data set mll=round(mll,2) ;    
 ```
 
