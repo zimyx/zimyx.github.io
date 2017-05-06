@@ -1,10 +1,5 @@
 ---
 title:  "继续学习时间轴"
-
-date:   2017-04-02 18:52:11 +0800
-
-categories: technology
-
 ---
 time line 线如何做
 
