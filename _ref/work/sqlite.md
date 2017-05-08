@@ -10,7 +10,8 @@ title:  "SQLite数据库"
 
 work库
 
-建表               w*l*_data
+#### 建表      w*l*_data
+
 ```sql
 CREATE TABLE w*l*_yxs(
 yyyymm  number ,        -- 年月
@@ -27,7 +28,8 @@ kdj     number,         -- 客单价
 
 转码  ```enca -L zh_CN -x UTF-8 /home/z/Desktop/201602.csv```
 
-导入CVS
+#### 导入CVS
+
 ```sql
 .separator ','
 .import  201603.csv tmp_0?                   
@@ -38,7 +40,9 @@ INSERT INTO w*l*_yxs
 SELECT  201701 ,门店编码, 门店名称, "销售收入(单位：万元)", "含税毛利(单位：万元)", 含税毛利率, 来客数, "客单价(单位：元)"
 FROM tmp_701  where  门店编码 >0 ;
 ```
-查询语句
+
+#### 查询语句
+
 ```sql
 合计
 SELECT yyyymm,count(yyyymm), round(SUM(xssr),2),SUM(hsml), round( SUM(hsml)/SUM(xssr),4) ,SUM(lks),round(SUM(xssr*10000)/SUM(lks),2) FROM w*l*_yxs GROUP BY yyyymm ;
@@ -53,7 +57,8 @@ select * from w*l*_yxs where yyyymm=201401;
 update w*l*_data set mll=round(mll,2) ;    
 ```
 
-建表       月度人效KPI表
+#### 建表       月度人效KPI表
+
 ```sql
 CREATE TABLE it_area_kpi (
 	yyyymm INTEGER NOT NULL,        --年月
@@ -67,20 +72,24 @@ CREATE TABLE it_area_kpi (
 );
 ```
 
-导入CVS数据
+#### 导入CVS数据
+
 ```sql
 INSERT INTO it_area_kpi
 (yyyymm, area, employee, yxs, yxs_rate, pos, pos_rate)
 SELECT yyyymm, 区域, 实际人数, "12月实绩", 产出系数, 收银台数量, 人均台数
 FROM tmp   ;
 ```
-合计
+
+#### 合计
+
 ```sql
 SELECT yyyymm,'小计',SUM(employee), SUM(yxs), ROUND(SUM(yxs)/SUM(employee),2), SUM(pos), ROUND(SUM(pos)/SUM(employee),2)
 FROM it_area_kpi GROUP BY yyyymm ;
 ```
 
-建表 it_org
+#### 建表 it_org
+
 ```sql
 CREATE TABLE it_org (
 	ID INTEGER NOT NULL,    --组织编号  （1组23区域45区组67人）

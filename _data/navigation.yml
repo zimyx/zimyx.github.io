@@ -46,5 +46,7 @@ ref-blog:
 ref-work:
   - title: work 相关
     children:
-      - title: "数据库"
+      - title: "SQLite数据库"
         url: /ref/work/sqlite/
+      - title: "推荐工具"
+        url: /ref/work/tool/
