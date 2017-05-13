@@ -49,7 +49,7 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 : # Open Graph/Twitter default site image
+og_image                 : "/assets/images/site-logo.png"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
@@ -73,8 +73,8 @@ author:
   avatar           : "/assets/images/2.gif" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "老啦 就这些"
   location         : "WuHan,China"
-  email            : "zimy@tom.com"
-  uri              : 
+  email            : "zimyx@outlook.com"
+  uri              :
   bitbucket        :
   codepen          :
   dribbble         :
@@ -230,7 +230,7 @@ collections:
 
 # Front Matter Defaults
 defaults:
-  # _posts 
+  # _posts
   - scope:
       path: ""
       type: posts
@@ -254,7 +254,7 @@ defaults:
       path: _posts/sayings
       type: posts
     values:
-      layout: page
+      layout: archive
       category: sayings
       read_time: true
       comments: true
@@ -264,11 +264,11 @@ defaults:
       path: _posts/quotations
       type: posts
     values:
-      layout: page
+      layout: archive
       category: quotations
       read_time: true
       comments: true
-  # 自参
+  # 自参  --建站
   - scope:
       path: _ref/blog
       type: ref
@@ -280,6 +280,7 @@ defaults:
       share: false
       sidebar:
         nav: ref-blog
+  # 自参  --工作
   - scope:
       path: _ref/work
       type: ref

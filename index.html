@@ -1,4 +1,29 @@
 ---
-layout: home
-author_profile: true
+layout: splash
+title: Z <small>基因</small>
+header:
+  overlay_color: "#5e616c"
+  overlay_image: /assets/images/home-page-feature.jpg
+  caption:
+excerpt: '<small>Z基因是一个基于Jekyll的博客站点 <br />
+  学习自<a href="https://mademistakes.com/about">Michael Rose</a>发布的主题<a href="https://github.com/mmistakes/minimal-mistakes">minimal-mistakes v4.3.0</a></small>  <br /> <br />'
+feature_row:
+  - image_path: /assets/images/live-feature.png
+    title: "苟日新"
+    alt: "sayings"
+  - image_path: /assets/images/study-feature.png
+    title: "又日新"
+    alt: "quotations"
+  - image_path: /assets/images/work-feature.png
+    title: "日日新"
+    alt: "think"
+intro:
+  - excerpt: '给点建议或者给颗<i class="fa fa-star"></i>吧:smiley: &nbsp;
+                           [<i class="fa fa-envelope-square"></i> Mail ](mailto:zimy@outlook.com){: .btn .btn--inverse}
+                           [<i class="fa fa-github"></i> Star ](https://github.com/zimyx/zimyx.github.io){: .btn .btn--inverse}
+  &nbsp;  &nbsp;  资源分享   &nbsp;  [<i class="fa fa-download"></i> Download ](http://){: .btn .btn--info}'
 ---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}
