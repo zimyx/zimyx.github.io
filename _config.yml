@@ -254,7 +254,7 @@ defaults:
       path: _posts/sayings
       type: posts
     values:
-      layout: archive
+      layout: page
       category: sayings
       read_time: true
       comments: true
@@ -264,7 +264,7 @@ defaults:
       path: _posts/quotations
       type: posts
     values:
-      layout: archive
+      layout: page
       category: quotations
       read_time: true
       comments: true
