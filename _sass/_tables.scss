@@ -36,3 +36,15 @@ td {
 tr, td, th {
   vertical-align: middle;
 }
+
+td:nth-child(1) {
+    white-space: nowrap;
+}  /* 首列不换行 */
+
+tr:hover {
+    background: #efefef;
+}  /* 悬浮变色 */
+
+tbody tr:nth-child(2n) {
+    background: rgba(158,188,226,0.12);
+}  /* 隔行变色 */
