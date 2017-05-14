@@ -54,7 +54,7 @@ og_image                 : "/assets/images/site-logo.png"
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
   type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
+  name                   : "Zimy"
   links: # An array of links to social media profiles
 
 # Analytics
