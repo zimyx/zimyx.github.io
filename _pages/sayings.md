@@ -1,10 +1,10 @@
 ---
 layout: archive
 permalink: /sayings/
-title:  "自说"
+title:  "Sayings"
 author_profile: true
 ---
-  说说那些看到的（see） 听到的（listen） 嗅到的（smell） 尝到的（taste） 感到的（feeling） 想到的 （idea） 
+  唠叨些看到的（see） 听到的（listen） 嗅到的（smell） 尝到的（taste） 感到的（feeling） 想到的 （idea） 
 <div>
   {% capture y %}'None'{% endcapture %}
   {% for post in site.categories.sayings %}
