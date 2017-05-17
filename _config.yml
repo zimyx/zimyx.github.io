@@ -275,9 +275,9 @@ defaults:
     values:
       layout: single
       read_time: false
-      comments: false
+      comments: true
       author_profile: false
-      share: false
+      share: true
       sidebar:
         nav: ref-blog
   # 自参  --工作
@@ -287,9 +287,9 @@ defaults:
     values:
       layout: single
       read_time: false
-      comments: false
+      comments: true
       author_profile: false
-      share: false
+      share: true
       sidebar:
         nav: ref-work
  # 自悟
