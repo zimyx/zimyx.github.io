@@ -1,5 +1,6 @@
 # zgene.cn
-学习自 Forked from https://github.com/mmistakes/minimal-mistakes 的jekyll主题
+2017年1月，想用Jekyll搭建一个静态站点的来提供资料查询，网上的大量案例证明2012年就已经流行，可以证明5年计划对于我就是落后5年。
+zgene学习自 Forked from https://github.com/mmistakes/minimal-mistakes 的jekyll主题
 使用了staticman的评论和谷歌的网站分析工具Google Analytics
 
 ### 安装
