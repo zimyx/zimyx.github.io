@@ -50,3 +50,5 @@ ref-work:
         url: /ref/work/sqlite/
       - title: "推荐工具"
         url: /ref/work/tool/
+      - title: "促销活动工作流"
+        url: /ref/work/promotion/

@@ -1,11 +1,11 @@
 ---
 layout: archive
 permalink: /ref/
-title:  "参考文档"
+title:  "Z参"
 author_profile: true
 ---
  参考说明，帮助文档
 
-<li> WORK  <a href="/ref/work/sqlite/">参考文档</a></li>
+ WORK  [参考文档](/ref/work/sqlite/){: .btn .btn--inverse}
 
-<li> BLOG  <a href="/ref/blog/markdown-use/">学习文档</a></li>
+ BLOG  [学习文档](/ref/blog/markdown-use){: .btn .btn--inverse} 
