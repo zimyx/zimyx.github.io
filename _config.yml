@@ -297,7 +297,7 @@ defaults:
       path: _posts/think
       type: posts
     values:
-      layout: work
+      layout: page
       category: think
       read_time: true
       comments: true
