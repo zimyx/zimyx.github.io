@@ -1,11 +1,7 @@
 ---
 title:  "促销流程"
 ---
-促销流程
+<img src="{{ '/assets/images/p.png' | absolute_url }}"  >
 
-<figure>
 
-  <img src="{{ '/assets/images/p.png' | absolute_url }}" alt="工作流">
-
-</figure>
 
