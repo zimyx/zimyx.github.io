@@ -62,7 +62,9 @@ Jeklly 支持的Markdown规范 （使用Typora的方法）
 **Success Notice:**   在文本块换行之后加上    {: .notice--success}
 {: .notice--success}
 
-附个人定制的base.user.css ，从##开始自动生成TOC和内容序号,参考[typora帮助](http://support.typora.io/)
+---
+
+**附件：** 个人定制的base.user.css ，从##开始自动生成TOC和内容序号,参考[typora帮助](http://support.typora.io/)
 
 ```css
 /**************************************
