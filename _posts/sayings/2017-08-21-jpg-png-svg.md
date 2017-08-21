@@ -13,8 +13,8 @@ Cheesecake Labs
 > 本文转载自：[众成翻译](http://www.zcfy.cc)
 > 译者：[lunasun](http://www.zcfy.cc/@lunasun)
 > 审校: [lizheming](http://www.zcfy.cc/@lizheming)
-> 链接：[http://www.zcfy.cc/article/3211](http://www.zcfy.cc/article/3211)
-> 原文：[https://cheesecakelabs.com/blog/jpg-png-svg-web-beginners-guide/](https://cheesecakelabs.com/blog/jpg-png-svg-web-beginners-guide/)
+> 链接：http://www.zcfy.cc/article/3211
+> 原文：https://cheesecakelabs.com/blog/jpg-png-svg-web-beginners-guide/
 
 如今，图像已经成为网络不可或缺的一部分。但情况并非一贯如此。直到1993年，Mosaic浏览器才在网页内容中加入图像。有些图像格式像GIF和JPEG当时已经存在，而PNG和SVG直到90年代才出现。图像用途多样，如：显示图片、品牌、插图、图表以及许多其他内容。
 
