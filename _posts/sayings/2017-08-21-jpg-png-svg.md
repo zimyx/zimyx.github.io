@@ -5,13 +5,8 @@ tags: 色
 keywords: jpg png svg
 description: 
 ---
-> 本文转载自：[众成翻译](http://www.zcfy.cc)   Cheesecake Labs网站 <br />
-> 译者：[lunasun](http://www.zcfy.cc/@lunasun)<br />
-> 审校: [lizheming](http://www.zcfy.cc/@lizheming)<br />
-> 链接：http://www.zcfy.cc/article/3211<br />
-> 原文：https://cheesecakelabs.com/blog/jpg-png-svg-web-beginners-guide/
-
 如今，图像已经成为网络不可或缺的一部分。但情况并非一贯如此。直到1993年，Mosaic浏览器才在网页内容中加入图像。有些图像格式像GIF和JPEG当时已经存在，而PNG和SVG直到90年代才出现。图像用途多样，如：显示图片、品牌、插图、图表以及许多其他内容。
+
 
 由于图片格式多样以及繁多的应用场景，如何选择正确的图片格式变得更加困难。LOGO应该是选择SVG还是PNG？而截图是选JPEG好还是PNG好？在不生成过大文件的前提下，文件的最优质量是多少？了解每个图像格式的工作原理以及它们各自的利弊可以帮助回答这些问题。
 
@@ -178,4 +173,9 @@ LOGO, 图标和数据可视化是SVG使用的优秀范例。
 了解如何使用和优化每种图片格式将确保更好的用户体验。因为用户将能够更早地预览和接收内容，同时减少带宽的使用。它还为设计人员提供了绘制创建动画和响应式页面的新机会。
 
 我希望这篇文章有助于解决一些网络上关于图像格式的诸多不确定性问题。如果你还有任何问题或建议，请在下方发表评论或与我联系。另外，如果觉得本文对你有帮助，不要忘了分享。
-​                
+
+> 本文转载自：[众成翻译](http://www.zcfy.cc)   Cheesecake Labs网站 <br />
+> 译者：[lunasun](http://www.zcfy.cc/@lunasun)<br />
+> 审校: [lizheming](http://www.zcfy.cc/@lizheming)<br />
+> 链接：http://www.zcfy.cc/article/3211<br />
+> 原文：https://cheesecakelabs.com/blog/jpg-png-svg-web-beginners-guide/
