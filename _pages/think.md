@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: archive
 permalink: /think/
 title:  "Z悟"
 author_profile: true
