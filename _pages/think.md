@@ -18,17 +18,16 @@ author_profile: true
 
 <div>
 
-  {% capture written_year %}'None'{% endcapture %}
-
-  {% for post in site.categories.think %}
+ {% capture y %}'None'{% endcapture %}
+ {% for post in site.categories.sayings %}
 
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% if year != written_year %}
+    {% if year != y %}
       <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-      {% capture written_year %}{{ year }}{% endcapture %}
+      {% capture y %}{{ year }}{% endcapture %}
     {% endif %}
     {% include archive-single.html %}
 
-  {% endfor %}
+ {% endfor %}
 
 </div>
