@@ -66,4 +66,4 @@ tags:
 
 awesome  两千年前的罗马皇帝是如此智慧：“ 我们所听到的不过只是一个观点，而非事实 ；我们所看到的不过只是一个视角，而非真相”
 
-![king](../../assets/images/king.jpg)
+![king](../../assets/images/king.jpg){: .align-right}
