@@ -52,3 +52,5 @@ ref-work:
         url: /ref/work/tool/
       - title: "促销活动工作流"
         url: /ref/work/promotion/
+      - title: "Arch Linux 安装记录"
+        url: /ref/work/ArchLinux安装记录/
