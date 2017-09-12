@@ -1,5 +1,5 @@
 ---
-title:  "Arch Linux 安装记录"
+title:  ""
 ---
 # Arch Linux 安装记录
 2017-06-15
