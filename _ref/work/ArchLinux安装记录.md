@@ -5,6 +5,7 @@ title:  "Arch Linux 安装记录"
 
 2017-06-15
 [TOC]
+{% include toc %}
 
 ## 安装准备
 
