@@ -1,7 +1,8 @@
 ---
-title:  ""
+title:  "Arch Linux 安装记录"
 ---
-# Arch Linux 安装记录
+
+
 2017-06-15
 [TOC]
 
@@ -324,9 +325,11 @@ xorg-app
   export XMODIFIERS=@im=fcitx 
 # sudo pacman -S alsa-utils  vlc  mpa            声卡驱动(alsamixer调整声道音量)，媒体播放器
 #sudo chown zimy Tdisk                           变更Tdisk盘的文件夹用户所有权
+#pacman -S  openssh                              远程登录命令ssh -p 端口 root@IP Addr
 #pacman -S  geary                                邮件客户端  
   邮件设置注意： 配置内网ip时，会报“couldn t find a place to store the pinned certificate”
   需要进入 “Session and Startup settings” 中 “应用程序自启动” 勾选上“Certificate and Key Storage(GNOME key ...)”
+#pacman -S  gvfs-smb sshfs       //安装两个包用于通过 Thunar 文件管理器浏览远程sabam共享目录
 ```
 
 ## 中文化,XX,打印
@@ -497,6 +500,7 @@ Yaourt -S  xmind
 ```
 
 ```
+关联文件类型
 <?xml version="1.0" encoding="utf-8"?>
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info"> 
 
