@@ -491,9 +491,9 @@ yaourt -R package_name – 删除软件包
 
   5. 重启一下，应该OK并会默认关联一种图标，检查用：file --mime-type XX.graphml   命令
 
-​    [参考链接](https://access.redhat.com/documentation/zh-CN/Red_Hat_Enterprise_Linux/7/html/Desktop_Migration_and_Administration_Guide/File_Formats.html)Redhat中文说明
+   [参考链接](https://access.redhat.com/documentation/zh-CN/Red_Hat_Enterprise_Linux/7/html/Desktop_Migration_and_Administration_Guide/File_Formats.html)Redhat中文说明
 
-####思维导图工具
+#### 思维导图工具
 
 ```
 Yaourt -S  xmind
