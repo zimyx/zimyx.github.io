@@ -515,4 +515,9 @@ Yaourt -S  xmind
  </mime-info>
 ```
 
+xmind 3.7.4-1版本的升级,参看AUR 该包介绍下的评论要: 
+
+``` 
+$ cp -r /usr/share/xmind/XMind/configuration  ${HOME}/.xmind/   和  rm -r ~/.xmind 才行
+```
 
