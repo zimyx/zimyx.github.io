@@ -196,7 +196,7 @@ CPU  i7-7700T @ 2.90GHz   ，RAM 16.0GB
  //  #date –s   hh:mm:ss     修改时间
  //  #hwclock  -w		     将当前时间写入CMOS中
 设置Locale本地化
-#nano /etc/locale.gen                开启en_US.UTF-8;zh_CN.UTF-8;zh_CN.GB18030;zh_CN.GB2312
+#nano /etc/locale.gen        开启en_US.UTF-8;zh_CN.UTF-8;zh_CN.GB18030;zh_CN.GB2312
 #locale-gen                                 生成指定的本地化文件
 # echo LANG=en_US.UTF-8 > /etc/locale.conf  创建 locale.conf 并提交您的本地化选项
 ```
@@ -205,7 +205,7 @@ CPU  i7-7700T @ 2.90GHz   ，RAM 16.0GB
 ```shell
 # passwd                                               设置root的密码
 # useradd -m -g users -G wheel -s /bin/bash zimy     用户名创建用户zimy
-# passwd zimy                                      这里添加wheel用户组是为该用户能够使用sudo提权
+# passwd zimy                               这里添加wheel用户组是为该用户能够使用sudo提权
 ```
 ### 生成初始ramdisk环境
 
@@ -221,16 +221,13 @@ bootctl 要创建 /boot/loader/entries/arch.conf 并添加以下内容，别�
 # nano /boot/loader/entries/arch.conf
    title          Arch Linux
    linux          /vmlinuz-linux
-   initrd         /intel-ucode.img   (启用Intel cpu微指令更新)
+?  initrd         /intel-ucode.img   (启用Intel cpu微指令更新，Intel CPU 需要安装 intel-ucode 并根据 Microcode 配置 boot loader.) 
    initrd         /initramfs-linux.img
    options           root=/dev/sdaX  rw         重要：该处实际根分区应考虑重启后设备号变化，本次为sda2
-更安全的做法可以用#blkid查询root分区的PARTUUID，例如                            详见：Systemd-boot
+更安全的做法可以用#blkid查询root分区的PARTUUID，例如          详见：Systemd-boot
 options       root=PARTUUID= 22ffcc5d-2708-46ee-997d-c1812ed3106e rw
-然后创建 /boot/loader/loader.conf，并写入下面配置:
-# nano /boot/loader/loader.conf
-    default  arch
-    timeout  5
-Intel CPU 也需要安装 intel-ucode 并根据 Microcode 配置 boot loader.
+
+可选修改 /boot/loader/loader.conf文件
 ```
 对于BIOS用户，推荐使用GRUB。
 \#pacman-S grub-bios 
@@ -284,8 +281,7 @@ Intel CPU 也需要安装 intel-ucode 并根据 Microcode 配置 boot loader.
 用户图形化交互的标准命名为“X Window System"，通常简称为*X11*或是*X* ，Xorg-X11使用X11的接口和标准,Xorg是在想运行的硬件和图形软件之间提供了一个接口。
 
 ```shell
-#pacman-S  xorg-server  xorg-init
-xorg-app
+#pacman-S  xorg-server  xorg-apps
 安装显卡驱动
 #lspci| grep VGA               检查显卡型号
 #pacman –S  xf86-video-intel 
@@ -294,42 +290,44 @@ xorg-app
 
 说明：显卡是AMD/ATI的改为xf86-video-ati；是GeForce7的改为nvidia；想装通用的显卡驱动，把命令中的则用xf86-video-vesa 。或者用命令**#pacman-Ss xf86-video | less **查看匹配
 
-## 基础环境
+## 桌面基础应用
 
 ```shell
 #timedatectl set-ntp true   启用时间同步
 #timedatectl                                    检查时间同步状态
 #systemctl status systemd-timesyncd               时间同步
-#pacman -S adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts wqy-microhei
-思源宋体、黑体,wqy-microhei必装（有些程序依赖通用TTF字体）
+---- 由此处起 可执行自制脚本批量安装，如下  
+  curl -O  https://raw.githubusercontent.com/zimyx/tool/master/ArchlinuxSH
+建议提前安装原生jre，否则会自动安装openjdk。安装yaourt后，装jdk8（jdk9目前对xmind、dbeaver依赖eclipse支持不好）; 用archlinux-java命令可切换、设置缺省java环境。
+#pacman -S adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts wqy-microhei                    思源宋体、黑体,wqy-microhei必装（有些程序依赖通用TTF字体）
 #pacman -S noto-fonts-emoji                      Google的emoji 字体
-#pacman  -S lightdm lightdm-gtk-greeter         安装LightDM登录管理器  (显示管理器)或用LXDM   
-#pacman –S  xfce4   xfce4-goodies               安装xfce4桌面 输入startxfce4进入 (桌面环境) 
+#pacman  -S lightdm lightdm-gtk-greeter      安装LightDM登录管理器  (显示管理器)或用LXDM   
+#pacman –S  xfce4   xfce4-goodies            安装xfce4桌面 输入startxfce4进入 (桌面环境) 
 #systemctl start lightdm.service
 #systemctl enable lightdm.service
-建议提前安装原生jre，通过AUR下载安装，否则安装后面的会自动安装openjdk
+安装基础工具软件
 #pacman –S  gvfs                                 自动挂载usb设备
 #pacman –S  slock                                小巧轻便的锁屏工具
 #pacman -S  bash-completion                      自动命令补全
-#pacman -S  chromium vivaldi                     安装google和vivaldi浏览器
+#pacman -S  chromium min                     安装google和min浏览器
 #pacman -S  libreoffice-fresh-zh-CN              安装OFFICE
 #pacman -S  unrar unzip p7zip  (AUR)libnatspec   支持解压zip、rar、7z和支持字符转换的工具libnatspec
 #pacman -S  file-roller                          图形化解压工具
 #pacman -S  evince   mypaint                     PDf / DjVu 等文档阅读工具，和绘图工具
 #pacman -S  catfish                              文件搜索功能
-#pacman -S  wget                                 必备下载工具，特别适合下载zip文件(使用wget -c断点续传)
+#pacman -S  wget                      必备下载工具，特别适合下载zip文件(使用wget -c断点续传)
 #pacman -S  remmina freerdp gnome-keyring        远程桌面(freerdp是支持win插件，gnome-keyring支持密码保存)
-#pacman -S  fcitx fcitx-im                       输入法（如无法配置输入法,需要安装fcitx-configtool并运行该工具配置） 
+#pacman -S  fcitx fcitx-im fcitx-sogoupinyin fcitx-configtool                       输入法（如无法配置输入法,需要安装fcitx-configtool并运行该工具配置） 
 非桌面环境在 ~/.xprofile 中加入以下代码
   export GTK_IM_MODULE=fcitx
   export QT_IM_MODULE=fcitx
   export XMODIFIERS=@im=fcitx 
-# sudo pacman -S alsa-utils  vlc  mpa            声卡驱动(alsamixer调整声道音量)，媒体播放器
+# sudo pacman -S alsa-utils  vlc  mpv          声卡驱动(alsamixer调整声道音量)，媒体播放器
 #sudo chown zimy Tdisk                           变更Tdisk盘的文件夹用户所有权
-#pacman -S  openssh                              远程登录命令ssh -p 端口 root@IP Addr
-#pacman -S  geary                                邮件客户端  
-  邮件设置注意： 配置内网ip时，会报“couldn t find a place to store the pinned certificate”
-  需要进入 “Session and Startup settings” 中 “应用程序自启动” 勾选上“Certificate and Key Storage(GNOME key ...)”
+//自动被依赖 #pacman -S  openssh                  远程登录命令ssh -p 端口 root@IP Addr
+#pacman -S  thunderbird                     邮件客户端 ( 启动方式 env LANG=zh_CN.UTF-8 )
+邮件迁移方法 拷贝原文件夹 ~/.thunderbird/?????.default/  到新装机相同路径下 
+执行命令 thunderbird -ProfileManager 创建新配置，删除不要的
 #pacman -S  gvfs-smb sshfs       //安装两个包用于通过 Thunar 文件管理器浏览远程sabam共享目录
 ```
 
@@ -357,11 +355,31 @@ libreoffice、chromium  中文化在应用中的菜单设定
 ### 科学NET
 
 * GitHub上下载XX-Net-n.n
+
 * 安装 `sudo pacman -S python2-notify  python2-pyopenssl `
+
 * 运行`sudo ./start ` 打开页面127.0.0.1:8085  检查
+
 * 安装SwitchyOmega.crx，及导入OmegaOptions.bak
+
 * 有可能导入CA认证不成功，可在Chromium设置-高级-管理证书界面手工导入XX-Net文件夹 data\gae_proxy 目录下的 "CA.crt" 证书。
+
 * 建立桌面快捷：../XX-Net/start (不勾选在终端运行)，如果启动不正常需检查文件夹的所有权并修改用chown。
+
+* 开启IP V6 代理地址搜索
+
+  ```sh
+  # pacman -S miredo      //安装隧道软件
+  # sudo systemctl start  miredo.service    //起服务生成虚拟网卡，可能要重启系统
+  # sudo systemctl enable miredo.service 
+  # nano  resolv.conf     //添加ip v6 的DNS 
+  nameserver 202.103.24.68
+  nameserver 218.104.111.122
+  nameserver 2001:470:20::2
+  ```
+
+  IPv6 连接测试网站  http://test-ipv6.com/
+
 
 ### 打印
 
@@ -520,4 +538,66 @@ xmind 3.7.4-1版本的升级,参看AUR 该包介绍下的评论要:
 ``` 
 $ cp -r /usr/share/xmind/XMind/configuration  ${HOME}/.xmind/   和  rm -r ~/.xmind 才行
 ```
+
+
+
+### 共享文件夹
+
+示例为CentOS上的共享
+
+1. 安装 samba
+
+   ```sh
+   # yum install samba
+   # su zimy
+   $ mkdir /home/zimy/shared
+   $ sudo chmod -R 0777 shared/
+   ```
+
+2. 修改conf 配置文件
+
+```sh
+# vi /etc/samba/smb.conf
+	[global]
+	workgroup = WORKGROUP                               //修改
+	hosts allow = 127. 192.71.9. 172.18.2. 202.100.168. //修改
+	security = user                    //share最低，其次是user(密码),最高是server
+	
+	[myshare]                                           //新增
+	comment=my shared files
+	path=/home/zimy/shared
+	public=yes
+	writeable=yes
+```
+
+1. 创建Samba用户帐户
+
+   Samba用户帐户必须是已有的Linux用户，用smbpasswd工具来创建
+
+   ```sh
+   # smbpasswd -a  zimy
+   ```
+
+2. 起服务
+
+   ```sh
+   # systemctl start smb.service     centos6.4版用 ( service smb  start )
+   # systemctl enable smb.service                  
+   # systemctl is-active smb                       ( chkconfig --level 35 smb on )
+   ```
+
+   查看当前smb状态命令   smbstatus 
+   通过Thunar连接   `smb://202.100.168.229/myshare/`
+
+## 其他
+ ###  由于密钥丢失的更新失败 ：   
+
+     sudo yaourt -Syu      报 archlinuxcn 源 密钥错误   
+
+     错误：所需的密钥从密钥环中丢失 
+   用`sudo pacman -S archlinux-keyring && sudo pacman -Syu` 解决
+
+### 用yaourt安装IDEA 报错空间不够
+
+ 增加/tmp空间 $sudo mount -t tmpfs -o size=4g tmpfs /tmp  。装完可调回来
 
