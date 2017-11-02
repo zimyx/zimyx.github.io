@@ -287,8 +287,7 @@ options       root=PARTUUID= 22ffcc5d-2708-46ee-997d-c1812ed3106e rw
 #pacman –S  xf86-video-intel 
 #pacman -S libva-intel-driver   使用新GPU 的硬件编解码功能，选装
 ```
-
-说明：显卡是AMD/ATI的改为xf86-video-ati；是GeForce7的改为nvidia；想装通用的显卡驱动，把命令中的则用xf86-video-vesa 。或者用命令**#pacman-Ss xf86-video | less **查看匹配
+说明：显卡是AMD/ATI的改为xf86-video-ati；是GeForce7的改为nvidia；想装通用的显卡驱动，把命令中的则用xf86-video-vesa 。或者用命令 `#pacman-Ss xf86-video | less ` 查看匹配
 
 ## 桌面基础应用
 
