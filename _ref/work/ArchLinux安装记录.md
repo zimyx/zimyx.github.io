@@ -257,13 +257,18 @@ options       root=PARTUUID= 22ffcc5d-2708-46ee-997d-c1812ed3106e rw
 #### 静态有线 IP设置
 
 ```shell
+                             采用 systemd-network 配置
 警告: 请使用#systemctl--type=service确保其它配置网络的服务都没有运行，同时使用多个网络配置工具会冲突。
 #nano  /etc/systemd/network/wired.network
- [Match]
-  Name=enp3s0
- [Network]
-  Address=113.57.196.37/29
-  Gateway=113.57.196.33
+[Match]
+ Name=enp0s31f6
+[Network]
+ Address=192.71.9.1
+ Gateway=192.71.9.111
+[Route]
+ Gateway=192.71.9.254
+ Destination=202.100.168.0/24
+ Metric=0
 
 #nano /etc/resolv.conf   增加DNS： nameserver 202.103.24.68
 #systemctl enable systemd-networkd.service      起服务
@@ -287,7 +292,8 @@ options       root=PARTUUID= 22ffcc5d-2708-46ee-997d-c1812ed3106e rw
 #pacman –S  xf86-video-intel 
 #pacman -S libva-intel-driver   使用新GPU 的硬件编解码功能，选装
 ```
-说明：显卡是AMD/ATI的改为xf86-video-ati；是GeForce7的改为nvidia；想装通用的显卡驱动，把命令中的则用xf86-video-vesa 。或者用命令 `#pacman-Ss xf86-video | less ` 查看匹配
+
+说明：显卡是AMD/ATI的改为xf86-video-ati；是GeForce7的改为nvidia；想装通用的显卡驱动，把命令中的则用xf86-video-vesa 。或者用命令**#pacman-Ss xf86-video | less **查看匹配
 
 ## 桌面基础应用
 
@@ -312,7 +318,7 @@ options       root=PARTUUID= 22ffcc5d-2708-46ee-997d-c1812ed3106e rw
 #pacman -S  libreoffice-fresh-zh-CN              安装OFFICE
 #pacman -S  unrar unzip p7zip  (AUR)libnatspec   支持解压zip、rar、7z和支持字符转换的工具libnatspec
 #pacman -S  file-roller                          图形化解压工具
-#pacman -S  evince   mypaint                     PDf / DjVu 等文档阅读工具，和绘图工具
+#pacman -S  evince     nomacs                    PDf / DjVu 等文档阅读工具，和绘图工具
 #pacman -S  catfish                              文件搜索功能
 #pacman -S  wget                      必备下载工具，特别适合下载zip文件(使用wget -c断点续传)
 #pacman -S  remmina freerdp gnome-keyring        远程桌面(freerdp是支持win插件，gnome-keyring支持密码保存)
