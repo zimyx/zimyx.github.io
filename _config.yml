@@ -220,7 +220,7 @@ tag_archive:
 compress_html:
   clippings: all
   ignore:
-    envs: development
+    envs: production    #development
 
 # Collections
 collections:
