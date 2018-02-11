@@ -64,8 +64,8 @@ analytics:
     tracking_id          :           # "UA-96090273-1"
 
 # google ad 广告
-google_ad-client         : "ca-pub-4696462454543555"
-google_ad-slot           : "8153031822"
+google_ad-client         :  # "ca-pub-4696462454543555"
+google_ad-slot           :  #  "8153031822"
 
 # Site Author
 author:
